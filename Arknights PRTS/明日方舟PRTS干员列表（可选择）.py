@@ -9,7 +9,7 @@ import re
 
 # 配置
 WAIT_TIME = 2  # 每次请求间隔3秒
-OUTPUT_DIR = "干员立绘"  # 输出目录
+OUTPUT_DIR = "新增干员立绘"  # 输出目录
 BASE_URL = "https://prts.wiki"
 
 # 创建输出目录

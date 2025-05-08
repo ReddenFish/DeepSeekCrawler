@@ -49,8 +49,8 @@ for a_tag in a_tags:
 print(f"共找到 {len(image_links)} 个图片链接")
 
 # 第二部分：访问每个图片页面并下载原始图片
-if not os.path.exists("downloaded_images"):
-    os.makedirs("downloaded_images")
+if not os.path.exists("NPC立绘"):
+    os.makedirs("NPC立绘")
 
 for img_page_url in image_links[700:]:
     try:
@@ -91,7 +91,7 @@ for img_page_url in image_links[700:]:
         file_ext = os.path.splitext(filename)[1] or ".png"
         
         # 确保文件名不重复
-        file_path = os.path.join("downloaded_images", f"{clean_name}{file_ext}")
+        file_path = os.path.join("NPC立绘", f"{clean_name}{file_ext}")
         
         print(f"图片URL: {image_url}")
         print(f"文件名: {clean_name}{file_ext}")

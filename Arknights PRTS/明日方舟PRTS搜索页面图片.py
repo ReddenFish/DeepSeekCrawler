@@ -26,8 +26,8 @@ def get_image_links(driver):
 
 def download_images(driver, detail_urls):
     # 创建保存图片的目录
-    if not os.path.exists("prts_images"):
-        os.makedirs("prts_images")
+    if not os.path.exists("prts搜索"):
+        os.makedirs("prts搜索")
     
     for i, url in enumerate(detail_urls, 1):
         try:
@@ -53,7 +53,7 @@ def download_images(driver, detail_urls):
             if response.status_code == 200:
                 # 清理文件名中的非法字符
                 safe_name = "".join([c for c in image_name if c not in r'\/:*?"<>|'])
-                file_path = os.path.join("prts_images", f"{safe_name}.png")
+                file_path = os.path.join("prts搜索", f"{safe_name}.png")
                 
                 with open(file_path, "wb") as f:
                     for chunk in response.iter_content(1024):
